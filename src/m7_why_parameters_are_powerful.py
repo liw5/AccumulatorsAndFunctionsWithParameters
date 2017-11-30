@@ -100,18 +100,18 @@ def run_test_better_draw_circles():
     print('--------------------------------------------------')
     print('Testing  better_draw_circles:  See graphics window')
     print('--------------------------------------------------')
-    better_draw_circles()
+    better_draw_circles(5)
 
 
-def better_draw_circles():
+def better_draw_circles(n):
 
-    new_parameter = 5
+    radius_increase = n
 
     window = rg.RoseWindow(400, 400)
 
     center = rg.Point(200, 200)
     for k in range(21):
-        circle = rg.Circle(center, new_parameter * k)
+        circle = rg.Circle(center, radius_increase * k)
         circle.attach_to(window)
         window.render(0.05)
 
@@ -152,14 +152,14 @@ def run_test_even_better_draw_circles():
     print('--------------------------------------------------')
     print('Testing  even_better_draw_circles:  See graphics window')
     print('--------------------------------------------------')
-    even_better_draw_circles()
+    even_better_draw_circles(5, 'green', 20)
 
 
-def even_better_draw_circles():
+def even_better_draw_circles(n,m,l):
 
-    radius_parameter = 5
-    color_parameter = 'green'
-    number_of_circles_parameter = 20
+    radius_parameter = n
+    color_parameter = m
+    number_of_circles_parameter = l
 
     window = rg.RoseWindow(400, 400)
 
